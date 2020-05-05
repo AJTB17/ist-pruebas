@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta http-equiv="pragma" content="no-cache" />
+<!------metas end ----->
+
+<!------css end ------->
+		<title></title>
+		<style>
+			.cont_grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+				grid-auto-rows: 300px;
+				grid-gap: 10px;
+				grid-auto-flow: dense;
+			}
+			
+			.cont_grid img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+			img:nth-child(6) {
+				grid-area: 1 / 1 / span 2 / span 1;
+			}
+			img:nth-child(9) {
+				grid-area: span 1 / span 2;
+			}
+			img:nth-child(4) {
+				grid-area: span 2 / span 1
+			}
+			img:nth-child(2) {
+				grid-area:  span 1 / span 2
+			}
+
+			img:first-child, img:nth-child(2) {
+				grid-area: span 1 / span 2;
+			}
+
+		</style>
+	 </head>
+	 <body>
+		<header>
+		</header>
+		<main>
+			<div class="cont_grid">
+				<img src="https://wallpaperaccess.com/full/234990.jpg">
+				<img src="img/astrocerveza.jpg">
+<!--				<img src="https://fondosmil.com/fondo/17010.jpg">-->
+				<img src="https://i.pinimg.com/originals/fc/d5/eb/fcd5eb28bb45c94dc0b3cfeb9ace217f.jpg">
+<!--				<img src="https://fondosmil.com/fondo/17010.jpg">-->
+				<img src="https://www.xtrafondos.com/wallpapers/stormtrooper-3643.jpg">
+				<img src="https://image.winudf.com/v2/image/b3JnLnRlY2h3aW5kb3cud2FsbHBhcGVyc29mcG9rZW1vbl9zY3JlZW5zaG90c18yM18xOGU2Y2NmMQ/screen-20.jpg?fakeurl=1&type=.jpg">
+				<img src="https://wallpapercave.com/wp/wp4325401.jpg">
+				<img src="img/70-701963_wallpapers-full-hd-4k-para-pc-pubg-wallpapers.jpg">
+				<img src="img/lambo.jpg">
+<!--				<img src="https://i.pinimg.com/originals/3c/04/4c/3c044c6f58e696b0b729c78ce869b383.jpg">-->
+				<img src="https://www.xtrafondos.com/wallpapers/fortnite-battle-bus-3760.jpg">
+			</div>
+		</main>
+		<footer>
+		</footer>
+	 </body>
+</html>
