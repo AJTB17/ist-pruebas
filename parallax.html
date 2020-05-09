@@ -89,12 +89,17 @@
 		    text = document.getElementById("text");
 		
 		window.addEventListener("scroll", function(){
-			var value = window.scrollY;
-			bg.style.top = value * 0.25 + 'px';
-			moon.style.left = -value * .5 + 'px';  
-			mountain.style.top = -value * 0.15 + 'px';  
-			road.style.top = value * 0.15 + 'px';  
-			text.style.top = value * 0.5 + 'px';  
+			var value = window.scrollY,
+				valor = 255 - value * .10;
+			
+			if(value < 800){
+				bg.style.top = value * 0.10 + 'px';
+				moon.style.left = -value * .5 + 'px';  
+				mountain.style.top = -value * 0.15 + 'px';  
+				road.style.top = value * 0.15 + 'px';  
+				text.style.top = value * 0.5 + 'px'; 
+				text.style.color = "rgb("+ valor +','+ valor +','+ valor +")"; 
+			}
 		})
 	</script>
 </html>
