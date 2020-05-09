@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta http-equiv="pragma" content="no-cache" />
+<!------metas end ----->
+
+<!------css end ------->
+		<title></title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			.body {
+				margin: 0;
+				padding: 0;
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+				min-height: 100vh;
+				width: 50%;
+				background: #001133;
+				font-family: consolas;
+			}
+			.body:nth-child(2) 
+			{
+				background: linear-gradient(#6f0020, #550011);
+			}
+			
+			a {
+				position: relative;
+				display: inline-block;
+				padding: 15px 30px;
+				color: #0099ff;
+				text-transform: uppercase;
+				letter-spacing: 4px;
+				text-decoration: none;
+				font-size: 24px;
+				overflow: hidden;
+				transition: .2s;
+			}		
+			a:hover {
+				color: #212344;
+				background: #0099ff;
+				box-shadow: 0 0 10px #0099ff, 0 0 40px #0099ff, 0 0 80px #0099ff;
+				transition-delay: 1s;
+			}
+			a span {
+				position: absolute;
+				display: block;
+			}
+			
+			a span:nth-child(1) {
+				top: 0;
+				left: -100%;
+				width: 100%;
+				height: 2px;
+				background: linear-gradient(90deg, transparent, #0099ff);
+			}			
+			.f2 span:nth-child(1) {
+				background: linear-gradient(90deg, transparent, #dd002f);
+			}
+			a:hover span:nth-child(1) {
+				left: 100%;
+				transition: 1s;
+			}
+			
+			
+			a span:nth-child(2) {
+				top: -100%;
+				right: 0;
+				width: 2px;
+				height: 100%;
+				background: linear-gradient(180deg, transparent, #0099ff);
+			}
+			.f2 span:nth-child(2){
+				background: linear-gradient(180deg, transparent, #dd002f);
+			}
+			a:hover span:nth-child(2) {
+				top: 100%;
+				transition: 1s;
+				transition-delay: .25s;
+			}
+			
+			
+			a span:nth-child(3){
+				bottom: 0;
+				right: -100%;
+				width: 100%;
+				height: 2px;
+				background: linear-gradient(270deg, transparent, #0099ff);
+			}
+			.f2 span:nth-child(3) {
+				background: linear-gradient(270deg, transparent,#dd002f);
+			}
+			a:hover span:nth-child(3) {
+				right: 100%;
+				transition: 1s;
+				transition-delay: .5s;
+			}
+			
+			
+			a span:nth-child(4) {
+				bottom: -100%;
+				left: 0;
+				width: 2px;
+				height: 100%;
+				background: linear-gradient(360deg, transparent, #0099ff);
+			}
+			.f2 span:nth-child(4) {
+				background: linear-gradient(360deg, transparent,#dd002f);
+			}
+			a:hover span:nth-child(4) {
+				bottom: 100%;
+				transition: 1s;
+				transition-delay: .75s;
+			}
+			
+			
+			.body:nth-child(2) .f2 {
+				color: #dd002f;
+			}
+			
+			.body:nth-child(2) .f2:hover {
+				color: #5f0011;
+				background: #ff011f;
+				box-shadow: 0 0 10px #ff011f, 0 0 40px #ff011f, 0 0 80px #ff011f;
+				transition-delay: 1s;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="body">
+			<a href="#">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				Neon button
+			</a>
+		</div><div class="body">
+			<a class="f2" href="2">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				Neon button
+			</a>
+		</div>
+	</body>
+</html>

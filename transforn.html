@@ -44,6 +44,8 @@
 				object-fit: cover;
 				position: absolute;
 				width: 50%;
+				
+				filter:custom(background: linear-gradient(#f00, #00f));
 			}
 			img[src="img/lambo.jpg"], img[src="img/70-701963_wallpapers-full-hd-4k-para-pc-pubg-wallpapers.jpg"] {
 				transform: rotateY(180deg);
@@ -107,11 +109,11 @@
 			}
 			.transition {
 				animation: pasohoja 1s ease-in-out 0s 1 normal;
-				animation-fill-mode: forwards;
+				animation-fill-mode: both;
 			}
 			.transition2 {
 				animation: pasohoja3 1s ease-in-out 0s 1 normal;
-				animation-fill-mode: forwards;
+				animation-fill-mode: both;
 			}
 			.entrada, .entrada2 {
 				transform-style: preserve-3d;
@@ -119,11 +121,11 @@
 			}
 			.entrada {
 				animation: pasohoja2 1s ease-in-out 0s 1 normal;
-				animation-fill-mode: forwards;
+				animation-fill-mode: both;
 			}
 			.entrada2 {
 				animation: pasohoja4 1s ease-in-out 0s 1 normal;
-				animation-fill-mode: forwards;
+				animation-fill-mode: both;
 			}
 			
 			
@@ -134,66 +136,76 @@
 			}
 			.transition3 {
 				animation: pasohoja5 1s ease-in-out 0s 1 normal;
-				animation-fill-mode: forwards;
+				animation-fill-mode: both;
 			}
 			.transition4 {
 				animation: pasohoja7 1s ease-in-out 0s 1 normal;
-				animation-fill-mode: forwards;
+				animation-fill-mode: both;
 			}
 			
 			.salida, .salida2 {
 				animation: pasohoja6 1s ease-in-out 0s 1 normal;
-				animation-fill-mode: forwards;
+				animation-fill-mode: both;
 				
 				transform-style: preserve-3d;
 				transform-origin: left;
 			}
 			.salida {
 				animation: pasohoja6 1s ease-in-out 0s 1 normal;
-				animation-fill-mode: forwards;
+				animation-fill-mode: both;
 			}
 			.salida2 {
 				animation: pasohoja8 1s ease-in-out 0s 1 normal;
-				animation-fill-mode: forwards;
+				animation-fill-mode: both;
 			}
 
 			@keyframes pasohoja {
 				0% {
 					transform: rotateY(0deg);
+					color: #fff;
+					filter: brightness(1);
 					z-index: 50;
 				}
 				100% {
 					transform: rotateY(180deg);
+					color: #000;
+					filter: brightness(.1);
 					z-index: 0;
 				}
 			}
 			@keyframes pasohoja2 {
 				0% {
 					transform: rotateY(0deg);
+					filter: brightness(.8);
 					z-index: 40;
 				}
 				100% {
 					transform: rotateY(180deg);
+					filter: brightness(1);
 					z-index: 10;
 				}
 			}
 			@keyframes pasohoja3 {
 				0% {
 					transform: rotateY(0deg);
+					filter: brightness(1);
 					z-index: 30;
 				}
 				100% {
 					transform: rotateY(180deg);
+					filter: brightness(.1);
 					z-index: 20;
 				}
 			}
 			@keyframes pasohoja4 {
 				0% {
 					transform: rotateY(0deg);
+					filter: brightness(.8);
 					z-index: 20;
 				}
 				100% {
 					transform: rotateY(180deg);
+					filter: brightness(1);
 					z-index: 30;
 				}
 			}
@@ -202,40 +214,48 @@
 			@keyframes pasohoja5 {
 				0% {
 					transform: rotateY(180deg);
+					filter: brightness(0.4);
 					z-index: 20;
 				}
 				100% {
 					transform: rotateY(0deg);
+					filter: brightness(1);
 					z-index: 30;
 				}
 			}
 			@keyframes pasohoja6 {
 				0% {
 					transform: rotateY(180deg);
+					filter: brightness(1);
 					z-index: 30;
 				}
 				100% {
 					transform: rotateY(0deg);
+					filter: brightness(.1);
 					z-index: 20;
 				}
 			}
 			@keyframes pasohoja7 {
 				0% {
 					transform: rotateY(180deg);
+					filter: brightness(0.4);
 					z-index: 0;
 				}
 				100% {
 					transform: rotateY(0deg);
+					filter: brightness(1);
 					z-index: 50;
 				}
 			}
 			@keyframes pasohoja8 {
 				0% {
 					transform: rotateY(180deg);
+					filter: brightness(1);
 					z-index: 10;
 				}
 				100% {
 					transform: rotateY(0deg);
+					filter: brightness(.1);
 					z-index: 40;
 				}
 			}

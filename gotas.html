@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+		<meta name="description" content="Estancia los otros">
+		<meta name="keywords" content="campamento hotel restaurant eventos campestre">
+		<meta name="author" content="Estancia los otros">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta http-equiv="pragma" content="no-cache" />
+<!------metas end ----->
+
+<!------css end ------->
+		<title></title>
+		<style>
+			body {
+				padding: 0;
+				margin: 0;
+			}
+			main {
+				padding: 0;
+				margin: 0;
+				
+				filter: contrast(10);
+				background: #fff;
+			}
+			.pecera {
+				margin: 0;
+				padding: 0;
+				width: 100vw;
+				height: 50vh;
+				
+				display: flex;
+				justify-content: space-around;
+				background: #fff;
+			}
+			.pecera:nth-child(3){
+				transform:rotateZ(180deg);
+			}
+			main h1 {
+				color: #101010;
+				position: absolute;
+				top: 40%;
+				left: 50%;
+				transform: translate(-50%, -60%);
+				font-family: sans-serif;
+				font-size: 150px;
+				letter-spacing: 2px;
+				z-index: 10;
+			}
+			.gota {
+				background: #f00;
+				width: 100px;
+				height: 100px;
+				position: relative;
+				border-radius: 50%;
+				filter: blur(10px);
+				z-index: 20;
+				
+				filter: drop-shadow(0px 5px 10px #500);
+			}
+			
+			.gota:nth-child(1){
+				animation: gota1 1s linear 0s infinite alternate;
+				animation-duration: cubic-bezier(1,-0.07, 0.56, 1.34);
+				
+			}
+			.gota:nth-child(2){
+				animation: gota2 1s ease 0s infinite alternate;
+				
+			}
+			.gota:nth-child(3){
+				animation: gota3 2s ease-in 0s infinite alternate;
+				
+			}
+			.gota:nth-child(4){
+				animation: gota4 1s ease-out 0s infinite alternate;
+				
+			}
+			.gota:nth-child(5){
+				animation: gota5 2s ease-in-out 0s infinite alternate;
+				
+			}
+			.gota:nth-child(6){
+				animation: gota6 1s linear 0s infinite alternate;
+				
+			}
+			
+			@keyframes gota1 {
+				from {
+					transform: translate(0,0);
+				}
+				to {
+					transform: translate(0,85vh);
+				}
+			}
+			@keyframes gota2 {
+				from {
+					transform: translate(0,0);
+				}
+				to {
+					transform: translate(0,85vh);
+				}
+			}
+			@keyframes gota3 {
+				from {
+					transform: translate(0,0);
+				}
+				to {
+					transform: translate(0,85vh);
+				}
+			}
+			@keyframes gota4 {
+				from {
+					transform: translate(0,0);
+				}
+				to {
+					transform: translate(0,85vh);
+				}
+			}
+			@keyframes gota5 {
+				from {
+					transform: translate(0,0);
+				}
+				to {
+					transform: translate(0,85vh);
+				}
+			}
+			@keyframes gota6 {
+				from {
+					transform: translate(0,0);
+				}
+				to {
+					transform: translate(0,85vh);
+				}
+			}
+		</style>
+	 </head>
+	 <body>
+		<header>
+		</header>
+		<main>
+			<div class="pecera">
+				<div class="gota"></div>
+				<div class="gota"></div>
+				<div class="gota"></div>
+				<div class="gota"></div>
+				<div class="gota"></div>
+				<div class="gota"></div>
+			</div>
+			<h1>IST</h1>
+			<div class="pecera">
+				<div class="gota"></div>
+				<div class="gota"></div>
+				<div class="gota"></div>
+				<div class="gota"></div>
+				<div class="gota"></div>
+				<div class="gota"></div>
+			</div>
+		</main>
+		<footer>
+		</footer>
+	 </body>
+</html>
