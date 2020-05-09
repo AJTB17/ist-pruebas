@@ -10,8 +10,144 @@
 <!------css end ------->
 		<title></title>
 		<style>
-			img {
+			*{
+				box-sizing: border-box;
+			}
+			body {
+				padding: 0;
+				margin: 0;
+				width: 100vw;
+				height: 100vh;
+			}
+			main {
+				display: flex;
+				flex-flow: nowrap;
+				padding: 0;
+				margin: 0;
+				overflow-y: hidden;
+				height: 100%;
+				width: 100%;
+			}
+			.pag_cont {
 				width: 50%;
+				min-width: 50%;
+				display: inline-flex;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.pag_cont img {
+				display: inline-block;
+				height: 100%;
+				object-fit: cover;
+				width: 50%;
+				position: relative;
+				z-index: 0;
+			}
+			img:nth-child(1) {
+				width: 100%;
+				object-position: left;
+			}
+			img[src="img/lambo.jpg"] {
+				object-position: center;
+				transform-style: preserve-3d;
+				position: absolute;
+				z-index: 0;
+			}
+			img[src="img/70-701963_wallpapers-full-hd-4k-para-pc-pubg-wallpapers.jpg"] {
+				object-position: right;
+			}
+			.pag_cont--text_cont {
+				width: 100%;
+				height: 100%;
+				background: #000;
+				color: #ddd;
+				display: inline-block;
+				padding: 25px;
+				font-family: sans-serif;
+				text-align: justify;
+				position: relative;
+				z-index: 10;
+				
+			}
+			.pag_cont--text_cont h1 {
+				margin: 0;
+			}
+			.pag_cont--text_cont p {
+				margin: 15px 0px;
+			}
+/*
+			.slice-bt {
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				background: #f00; 
+				z-index: 100;
+			}
+*/
+			.slice-right1{
+				width: 100px;
+				height: 100px;
+				position: absolute;
+				background: #f00; 
+				z-index: 100;
+				background: #0f0;
+				bottom: 0;
+				right: 0;
+			}
+/*
+			.slice-left2 {
+				background: #f00;
+				bottom: 0;
+				left: 0;
+			}
+			.slice-right2{
+				background: #0f0;
+				bottom: 0;
+				right: 0;
+			}
+			.slice-left3 {
+				background: #f00;
+				bottom: 0;
+				left: 0;
+			}
+*/
+			.transition {
+				animation: pasohoja 1s ease-in-out 0s 1 normal;
+				animation-fill-mode: forwards;
+				
+				transform: rotateY(0deg);
+				transform-style: preserve-3d;
+				transform-origin: left;
+			}
+			.entrada {
+				animation: pasohoja2 1s ease-in-out 0s 1 normal;
+				animation-fill-mode: forwards;
+				transform-style: preserve-3d;
+				transform-origin: left;
+			}
+
+			.hidden {
+				display: none;
+			}
+			@keyframes pasohoja {
+				0% {
+					transform: rotateY(0deg);
+				}
+				100% {
+					transform: rotateY(180deg);
+				}
+			}
+			@keyframes pasohoja2 {
+				0% {
+					transform: rotateY(0deg);
+					z-index: 0;
+				}
+				100% {
+					transform: rotateY(-180deg);
+					z-index: 20;
+				}
 			}
 		</style>
 	 </head>
@@ -19,9 +155,48 @@
 		<header>
 		</header>
 		<main>
-			<img src="img/astrocerveza.jpg">
+			<div class="pag_cont">
+				<img src="img/astrocerveza.jpg">
+				<div class="slice-bt slice-right1" id="slice-bt_right1"></div>
+			</div>
+			<div class="pag_cont">
+				<div class="pag_cont--text_cont">
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?</p>
+				</div><img src="img/lambo.jpg">
+			</div>
+<!--
+			<div class="pag_cont">
+				<div class="slice-bt slice-left2" id="slice-bt_right1"></div>
+				<div class="pag_cont--text_cont">
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?</p>
+				</div>
+				<div class="slice-bt slice-right2" id="slice-bt_right1"></div>
+			</div><div class="pag_cont">
+				<div class="slice-bt slice-left3" id="slice-bt_right1"></div>
+				<img src="img/70-701963_wallpapers-full-hd-4k-para-pc-pubg-wallpapers.jpg"><div class="pag_cont--text_cont">
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?</p>
+				</div>
+			</div>
+-->
 		</main>
 		<footer>
 		</footer>
-	 </body>
+	</body>
+	<script>
+		document.getElementById("slice-bt_right1").addEventListener("click", slice);
+		
+		function slice(){
+			console.log("1")
+			document.getElementsByClassName("pag_cont--text_cont")[0].classList.add("transition");
+			document.getElementsByTagName("img")[1].classList.add("entrada");
+			
+//			setTimeout(function(){
+//				document.getElementsByClassName("pag_cont")[0].classList.add("hidden");
+//			}, 1000)
+		}
+	
+	</script>
 </html>
