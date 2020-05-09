@@ -16,51 +16,49 @@
 			body {
 				padding: 0;
 				margin: 0;
-				width: 100vw;
 				height: 100vh;
+				width: 100vw;
+				
+				overflow: hidden;
 			}
 			main {
 				display: flex;
 				flex-flow: nowrap;
 				padding: 0;
 				margin: 0;
-				overflow-y: hidden;
 				height: 100%;
 				width: 100%;
 			}
 			.pag_cont {
 				width: 50%;
 				min-width: 50%;
+				max-width: 50%;
 				display: inline-flex;
 				height: 100%;
 				margin: 0;
 				padding: 0;
-				box-sizing: border-box;
 			}
 			.pag_cont img {
 				display: inline-block;
 				height: 100%;
 				object-fit: cover;
-				width: 50%;
-				position: relative;
-				z-index: 0;
-			}
-			img:nth-child(1) {
-				width: 100%;
-				object-position: left;
-			}
-			img[src="img/lambo.jpg"] {
-				object-position: center;
-				transform-style: preserve-3d;
 				position: absolute;
-				z-index: 0;
+				width: 50%;
+			}
+			img[src="img/lambo.jpg"], img[src="img/70-701963_wallpapers-full-hd-4k-para-pc-pubg-wallpapers.jpg"] {
 				transform: rotateY(180deg);
+				z-index: 40;
 			}
 			img[src="img/70-701963_wallpapers-full-hd-4k-para-pc-pubg-wallpapers.jpg"] {
 				object-position: right;
+				z-index: 20;
+				left: 50%;
 			}
-			.pag_cont--text_cont {
-				width: 100%;
+			img[src="img/astrocerveza.jpg"] {
+				object-position: left;
+			}
+			.pag_cont--text_cont, .pag_cont--text_cont2 {
+				width: 50%;
 				height: 100%;
 				background: #000;
 				color: #ddd;
@@ -68,8 +66,15 @@
 				padding: 25px;
 				font-family: sans-serif;
 				text-align: justify;
-				position: relative;
-				z-index: 10;
+				position: absolute;
+				left: 50%;
+				z-index: 50;
+				
+			}
+			
+			.pag_cont--text_cont2{
+				background: #f00;
+				z-index: 30;
 				
 			}
 			.pag_cont--text_cont h1 {
@@ -95,72 +100,143 @@
 				bottom: 0;
 				left: 0;
 			}
+			.transition, .transition2 {
+				transform: rotateY(0deg);
+				transform-style: preserve-3d;
+				transform-origin: left;
+			}
 			.transition {
 				animation: pasohoja 1s ease-in-out 0s 1 normal;
 				animation-fill-mode: forwards;
-				
-				transform: rotateY(0deg);
+			}
+			.transition2 {
+				animation: pasohoja3 1s ease-in-out 0s 1 normal;
+				animation-fill-mode: forwards;
+			}
+			.entrada, .entrada2 {
 				transform-style: preserve-3d;
 				transform-origin: left;
 			}
 			.entrada {
 				animation: pasohoja2 1s ease-in-out 0s 1 normal;
 				animation-fill-mode: forwards;
-				transform-style: preserve-3d;
-				transform-origin: left;
 			}
-			.transition2 {
-				animation: pasohoja3 1s ease-in-out 0s 1 normal;
+			.entrada2 {
+				animation: pasohoja4 1s ease-in-out 0s 1 normal;
 				animation-fill-mode: forwards;
-				
+			}
+			
+			
+			.transition3, .transition4 {
 				transform-style: preserve-3d;
 				transform-origin: left;
 				transform: rotateY(180deg);
 			}
-			.salida {
-				animation: pasohoja4 1s ease-in-out 0s 1 normal;
+			.transition3 {
+				animation: pasohoja5 1s ease-in-out 0s 1 normal;
 				animation-fill-mode: forwards;
+			}
+			.transition4 {
+				animation: pasohoja7 1s ease-in-out 0s 1 normal;
+				animation-fill-mode: forwards;
+			}
+			
+			.salida, .salida2 {
+				animation: pasohoja6 1s ease-in-out 0s 1 normal;
+				animation-fill-mode: forwards;
+				
 				transform-style: preserve-3d;
 				transform-origin: left;
 			}
-
-			.hidden {
-				display: none;
+			.salida {
+				animation: pasohoja6 1s ease-in-out 0s 1 normal;
+				animation-fill-mode: forwards;
 			}
+			.salida2 {
+				animation: pasohoja8 1s ease-in-out 0s 1 normal;
+				animation-fill-mode: forwards;
+			}
+
 			@keyframes pasohoja {
 				0% {
 					transform: rotateY(0deg);
+					z-index: 50;
 				}
 				100% {
 					transform: rotateY(180deg);
+					z-index: 0;
 				}
 			}
 			@keyframes pasohoja2 {
 				0% {
 					transform: rotateY(0deg);
-					z-index: 0;
+					z-index: 40;
 				}
 				100% {
 					transform: rotateY(180deg);
-					z-index: 20;
+					z-index: 10;
 				}
 			}
 			@keyframes pasohoja3 {
 				0% {
+					transform: rotateY(0deg);
+					z-index: 30;
+				}
+				100% {
+					transform: rotateY(180deg);
+					z-index: 20;
+				}
+			}
+			@keyframes pasohoja4 {
+				0% {
+					transform: rotateY(0deg);
+					z-index: 20;
+				}
+				100% {
+					transform: rotateY(180deg);
+					z-index: 30;
+				}
+			}
+			
+			
+			@keyframes pasohoja5 {
+				0% {
 					transform: rotateY(180deg);
 					z-index: 20;
 				}
 				100% {
 					transform: rotateY(0deg);
-					z-index: 0;
+					z-index: 30;
 				}
 			}
-			@keyframes pasohoja4 {
+			@keyframes pasohoja6 {
 				0% {
 					transform: rotateY(180deg);
+					z-index: 30;
 				}
 				100% {
 					transform: rotateY(0deg);
+					z-index: 20;
+				}
+			}
+			@keyframes pasohoja7 {
+				0% {
+					transform: rotateY(180deg);
+					z-index: 0;
+				}
+				100% {
+					transform: rotateY(0deg);
+					z-index: 50;
+				}
+			}
+			@keyframes pasohoja8 {
+				0% {
+					transform: rotateY(180deg);
+					z-index: 10;
+				}
+				100% {
+					transform: rotateY(0deg);
+					z-index: 40;
 				}
 			}
 		</style>
@@ -170,26 +246,24 @@
 		</header>
 		<main>
 			<div class="slice-bt slice-left" id="slice-bt_left"></div>
-			<div class="pag_cont">
+			<div class="pag_cont visible" id="1">
 				<img src="img/astrocerveza.jpg">
 			</div>
-			<div class="pag_cont">
+			<div class="pag_cont semi-visible" id="2">
 				<div class="pag_cont--text_cont">
 					<h1>Lorem ipsum dolor sit amet</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?</p>
 				</div><img src="img/lambo.jpg">
+			</div><div class="pag_cont oculta" id="3">
+				<div class="pag_cont--text_cont2">
+					<h1>Lorem ipsum dolor sit amet</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?</p>
+				</div><img src="img/70-701963_wallpapers-full-hd-4k-para-pc-pubg-wallpapers.jpg">
 			</div>
 <!--
 			<div class="pag_cont">
-				
-				<div class="pag_cont--text_cont">
-					<h1>Lorem ipsum dolor sit amet</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?</p>
-				</div>
-				<div class="slice-bt slice-right2" id="slice-bt_right1"></div>
-			</div><div class="pag_cont">
 				<div class="slice-bt slice-left3" id="slice-bt_right1"></div>
-				<img src="img/70-701963_wallpapers-full-hd-4k-para-pc-pubg-wallpapers.jpg"><div class="pag_cont--text_cont">
+				
 					<h1>Lorem ipsum dolor sit amet</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio blanditiis accusantium doloribus ab, labore ipsam deleniti expedita minus eveniet sunt explicabo non placeat, unde laboriosam voluptatibus, eius doloremque incidunt quo?</p>
 				</div>
@@ -205,22 +279,96 @@
 		document.getElementById("slice-bt_left").addEventListener("click", slice2);
 		
 		function slice(){
-			document.getElementsByClassName("pag_cont--text_cont")[0].classList.add("transition");
-			document.getElementsByTagName("img")[1].classList.add("entrada");
-			
-			if(this != document.getElementsByClassName("pag_cont--text_cont")[0]){
-				document.getElementsByClassName("pag_cont--text_cont")[0].classList.remove("salida");
-				document.getElementsByTagName("img")[1].classList.remove("transition2");
+			var visible = document.getElementsByClassName("visible")[0].id,
+			    semivisible = document.getElementsByClassName("semi-visible")[0].id,
+			    oculto = document.getElementsByClassName("oculta")[0].id,
+				
+				objetov = document.getElementById(visible),
+				objetosv = document.getElementById(semivisible),
+				objetoo = document.getElementById(oculto),
+				cambio = false;
+			if(visible == "1"){
+				objetosv.childNodes[1].classList.remove("transition");
+				objetosv.childNodes[1].classList.remove("transition4");
+				objetosv.childNodes[2].classList.remove("entrada");
+				objetosv.childNodes[2].classList.remove("salida2");
+				
+				objetosv.childNodes[1].classList.add("transition");
+				objetosv.childNodes[2].classList.add("entrada");
+				
+				cambio = true;
+			} else if(visible == "2"){
+				objetosv.childNodes[1].classList.remove("transition2");
+				objetosv.childNodes[1].classList.remove("transition3");
+				objetosv.childNodes[2].classList.remove("entrada2");
+				objetosv.childNodes[2].classList.remove("salida");
+				
+				objetosv.childNodes[1].classList.add("transition2");
+				objetosv.childNodes[2].classList.add("entrada2");
+				
+				cambio = true;
+			} else if(visible == "3"){
+				
 			}
+			
+			if(cambio == true){
+				objetov.classList.add("oculta");
+				objetov.classList.remove("visible");
+
+				objetosv.classList.add("visible");
+				objetosv.classList.remove("semi-visible");
+
+				objetoo.classList.add("semi-visible");
+				objetoo.classList.remove("oculta");
+			}	
 		}
 		function slice2(){
+			var visible = document.getElementsByClassName("visible")[0].id,
+			    semivisible = document.getElementsByClassName("semi-visible")[0].id,
+			    oculto = document.getElementsByClassName("oculta")[0].id,
+				
+				objetov = document.getElementById(visible),
+				objetosv = document.getElementById(semivisible),
+				objetoo = document.getElementById(oculto),
+				cambio = false;
 			
-			document.getElementsByClassName("pag_cont--text_cont")[0].classList.remove("transition");
-			document.getElementsByTagName("img")[1].classList.remove("entrada");
+			if(visible == "1"){}
+			else if(visible == "2"){
+				
+				objetov.childNodes[1].classList.remove("transition4");
+				objetov.childNodes[1].classList.remove("transition");
+				objetov.childNodes[2].classList.remove("salida2");
+				objetov.childNodes[2].classList.remove("entrada");
+				
+				objetov.childNodes[1].classList.add("transition4");
+				objetov.childNodes[2].classList.add("salida2");
+				
+				cambio = true;
+			} 
+			else if(visible == "3"){
+				
+				objetov.childNodes[1].classList.remove("transition3");
+				objetov.childNodes[1].classList.remove("transition2");
+				objetov.childNodes[2].classList.remove("salida");
+				objetov.childNodes[2].classList.remove("entrada2");
+				
+				objetov.childNodes[1].classList.add("transition3");
+				objetov.childNodes[2].classList.add("salida");
+				cambio = true;
+			}
 			
-			document.getElementsByClassName("pag_cont--text_cont")[0].classList.add("salida");
-			document.getElementsByTagName("img")[1].classList.add("transition2");
-			
+			if(cambio == true){
+				objetov.classList.add("semi-visible");
+				objetov.classList.remove("visible");
+
+				objetoo.classList.add("visible");
+				objetoo.classList.remove("oculta");
+				
+				objetosv.classList.remove("semi-visible");
+				objetosv.classList.add("oculta");
+
+				
+			}	
 			
 		}
 	
