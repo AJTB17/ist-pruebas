@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1">
+		<meta name="description" content="Estancia los otros">
+		<meta name="keywords" content="campamento hotel restaurant eventos campestre">
+		<meta name="author" content="Estancia los otros">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta http-equiv="pragma" content="no-cache" />
+<!------metas end ----->
+
+<!------css end ------->
+		<title></title>
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: radial-gradient(#9ff, #00d);
+				min-height: 100vh;
+			}
+			
+			.cuadrilatero-a 
+			{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background: #525252;
+				
+				transform-origin: center;
+				transform-style: preserve-3d;
+				transform: perspective(1000px) rotateX(45deg) rotateZ(45deg) rotateY(45deg);
+				
+				animation: rota 5s linear infinite alternate;
+			}
+			@keyframes rota {
+				from {
+					transform: perspective(1000px)
+						rotateX(45deg) 			
+						rotateZ(45deg)
+/*						rotateY(45deg)*/
+						translateX(0)
+					;
+				}
+				to {
+					transform: perspective(1000px)
+						rotateX(405deg) 
+						rotateZ(405deg)
+/*						rotateY(405deg)*/
+/*						translateX(300px)*/
+					;
+				}
+			}
+			.cuadrilatero-a:before
+			{
+				content: '';
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background: #aa1111;
+				
+				transform-origin: bottom;
+				transform-style: preserve-3d;
+				transform: rotateX(-270deg);
+			}
+			.cuadrilatero-a:after
+			{
+				content: '';
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background: #1111aa;
+				
+				transform-origin: right;
+				transform-style: preserve-3d;
+				transform: rotateY(270deg);
+			}
+			
+			.cuadrilatero-b 
+			{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background: #11aa11;
+				
+				transform-origin: top;
+				transform-style: preserve-3d;
+				transform: rotateX(270deg);
+			}
+			.cuadrilatero-c
+			{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background: #ff5500;
+				
+				transform-origin: left;
+				transform-style: preserve-3d;
+				transform: rotateY(-270deg);
+			}
+			.cuadrilatero-d
+			{
+				position: absolute;
+				width: 200px;
+				height: 200px;
+				background: #aa0077;
+				
+				transform-origin: left;
+				transform-style: preserve-3d;
+				transform: translateZ(-200px);
+			}
+		</style>
+	 </head>
+	 <body>
+		<div class="cuadrilatero-a">
+			<div class="cuadrilatero-b"></div>
+			<div class="cuadrilatero-c"></div>
+			<div class="cuadrilatero-d"></div>
+		</div>
+	 </body>
+</html>
